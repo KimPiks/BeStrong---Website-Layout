@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xslt1.xslt" ?>
+
+<site>
+  <training_plans>
+    <training_plan plan_type="FullBodyWorkout">
+      <day n="1" rest_day="false">
+        <body_part>Chest</body_part>
+        <body_part>Biceps</body_part>
+        <body_part>Triceps</body_part>
+        <body_part>Shoulders</body_part>
+        <body_part>Back</body_part>
+        <body_part>Legs</body_part>
+      </day>
+      <day n="2" rest_day="true"></day>
+      <day n="3" rest_day="false">
+        <body_part>Chest</body_part>
+        <body_part>Biceps</body_part>
+        <body_part>Triceps</body_part>
+        <body_part>Shoulders</body_part>
+        <body_part>Back</body_part>
+        <body_part>Legs</body_part>
+      </day>
+      <day n="4" rest_day="true"></day>
+      <day n="5" rest_day="false">
+        <body_part>Chest</body_part>
+        <body_part>Biceps</body_part>
+        <body_part>Triceps</body_part>
+        <body_part>Shoulders</body_part>
+        <body_part>Back</body_part>
+        <body_part>Legs</body_part>
+      </day>
+      <day n="6" rest_day="true"></day>
+      <day n="7" rest_day="true"></day>
+    </training_plan>
+
+    <training_plan plan_type="Split">
+      <day n="1" rest_day="false">
+        <body_part>Chest</body_part>
+        <body_part>Triceps</body_part>
+      </day>
+      <day n="2" rest_day="false">
+        <body_part>Biceps</body_part>
+        <body_part>Back</body_part>
+      </day>
+      <day n="3" rest_day="false">
+        <body_part>Shoulders</body_part>
+        <body_part>Legs</body_part>
+      </day>
+      <day n="4" rest_day="false">
+        <body_part>Chest</body_part>
+        <body_part>Triceps</body_part>
+      </day>
+      <day n="5" rest_day="false">
+        <body_part>Biceps</body_part>
+        <body_part>Back</body_part>
+      </day>
+      <day n="6" rest_day="false">
+        <body_part>Shoulders</body_part>
+        <body_part>Legs</body_part>
+      </day>
+      <day n="7" rest_day="true"></day>
+    </training_plan>
+  </training_plans>
+
+  <exercises>
+    <exercise risky="medium">
+      <name>Bench Press</name>
+      <description>
+        Barbell press on a horizontal bench
+        <link url="https://www.budujmase.pl/atlas/klatka-piersiowa/wyciskanie-sztangi-na-lawce-poziomej.html"></link>
+      </description>
+      <image url="https://caliberstrong.com/wp-content/uploads/2020/04/how-to-bench-press.jpg"></image>
+      <engagement>
+        <body_part>Chest</body_part>
+      </engagement>
+      <equipment_needed optional="true">
+        <equipment>Bar</equipment>
+        <equipment>Dumbbells</equipment>
+      </equipment_needed>
+      <rep_ranges>6 8 12 15</rep_ranges>
+    </exercise>
+    <exercise risky="high">
+      <name>Deadlift</name>
+      <description>
+        An exercise involving many parts of the body
+      </description>
+      <links>
+        <link url="https://www.budujmase.pl/atlas/plecy/martwy-ciag.html"></link>
+      </links>
+      <image url="https://krosfitsports.com/storage/app/public/post/JvS9VgevHlOmBj9jYPDYXCz15bHpQg86uznC4IGj.jpeg"></image>
+      <engagement>
+        <body_part>Back</body_part>
+        <body_part>Legs</body_part>
+      </engagement>
+      <equipment_needed optional="true">
+        <equipment>Bar</equipment>
+        <equipment>Dumbbells</equipment>
+      </equipment_needed>
+      <rep_ranges>8 12 15</rep_ranges>
+    </exercise>
+    <exercise risky="low">
+      <name>Military Press</name>
+      <description>
+        Pushing the barbell overhead
+      </description>
+      <links>
+        <link url="https://en.wikipedia.org/wiki/Overhead_press"></link>
+        <link url="https://www.budujmase.pl/atlas/barki/military-press.html"></link>
+      </links>
+      <engagement>
+        <body_part>Shoulders</body_part>
+      </engagement>
+      <equipment_needed optional="false">
+        <equipment>Bar</equipment>
+      </equipment_needed>
+      <rep_ranges>6 8 10 12 15</rep_ranges>
+    </exercise>
+  </exercises>
+
+  <diet>
+    <macro_list>
+      <macro_element element="Białko" min_amount="1.21" max_amount="1.8"></macro_element>
+      <macro_element element="Węglowodany" min_amount="5" max_amount="7"></macro_element>
+      <macro_element element="Tłuszcze" min_amount="1.81" max_amount="2.2"></macro_element>
+    </macro_list>
+  </diet>
+</site>

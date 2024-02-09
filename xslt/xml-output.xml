@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+  <plany>
+    <plan FullBodyWorkout="true">
+      <dzien numer="1" wolne="Nie">
+        <partia_ciala>Chest</partia_ciala>
+        <partia_ciala>Biceps</partia_ciala>
+        <partia_ciala>Triceps</partia_ciala>
+        <partia_ciala>Shoulders</partia_ciala>
+        <partia_ciala>Back</partia_ciala>
+        <partia_ciala>Legs</partia_ciala>
+      </dzien>
+      <dzien numer="2" wolne="Tak" />
+      <dzien numer="3" wolne="Nie">
+        <partia_ciala>Chest</partia_ciala>
+        <partia_ciala>Biceps</partia_ciala>
+        <partia_ciala>Triceps</partia_ciala>
+        <partia_ciala>Shoulders</partia_ciala>
+        <partia_ciala>Back</partia_ciala>
+        <partia_ciala>Legs</partia_ciala>
+      </dzien>
+      <dzien numer="4" wolne="Tak" />
+      <dzien numer="5" wolne="Nie">
+        <partia_ciala>Chest</partia_ciala>
+        <partia_ciala>Biceps</partia_ciala>
+        <partia_ciala>Triceps</partia_ciala>
+        <partia_ciala>Shoulders</partia_ciala>
+        <partia_ciala>Back</partia_ciala>
+        <partia_ciala>Legs</partia_ciala>
+      </dzien>
+      <dzien numer="6" wolne="Tak" />
+      <dzien numer="7" wolne="Tak" />
+    </plan>
+    <plan Split="true">
+      <dzien numer="1" wolne="Nie">
+        <partia_ciala>Chest</partia_ciala>
+        <partia_ciala>Triceps</partia_ciala>
+      </dzien>
+      <dzien numer="2" wolne="Nie">
+        <partia_ciala>Biceps</partia_ciala>
+        <partia_ciala>Back</partia_ciala>
+      </dzien>
+      <dzien numer="3" wolne="Nie">
+        <partia_ciala>Shoulders</partia_ciala>
+        <partia_ciala>Legs</partia_ciala>
+      </dzien>
+      <dzien numer="4" wolne="Nie">
+        <partia_ciala>Chest</partia_ciala>
+        <partia_ciala>Triceps</partia_ciala>
+      </dzien>
+      <dzien numer="5" wolne="Nie">
+        <partia_ciala>Biceps</partia_ciala>
+        <partia_ciala>Back</partia_ciala>
+      </dzien>
+      <dzien numer="6" wolne="Nie">
+        <partia_ciala>Shoulders</partia_ciala>
+        <partia_ciala>Legs</partia_ciala>
+      </dzien>
+      <dzien numer="7" wolne="Tak" />
+    </plan>
+  </plany>
+  <dieta>
+    <macro_list>
+      <Białko>
+        <min min_amount="1.21" />
+        <max max_amount="1.8" />
+      </Białko>
+      <Węglowodany>
+        <min min_amount="5" />
+        <max max_amount="7" />
+      </Węglowodany>
+      <Tłuszcze>
+        <min min_amount="1.81" />
+        <max max_amount="2.2" />
+      </Tłuszcze>
+    </macro_list>
+  </dieta>
+</site>
