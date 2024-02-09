@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  
+  <xs:element name="site">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="training_plans">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="training_plan" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="exercises">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="exercise" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="diet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="macro_list">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="macro_element" maxOccurs="3"></xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  
+  <xs:element name="training_plan" type="training_plan_type"></xs:element>
+
+  <xs:simpleType name="plan_type_attribute_type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="3"></xs:minLength>
+      <xs:maxLength value="30"></xs:maxLength>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="training_plan_type">
+    <xs:sequence>
+      <xs:element name="day" type="day_type" minOccurs="7" maxOccurs="7"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="plan_type" type="plan_type_attribute_type"></xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="day_type">
+    <xs:sequence>
+      <xs:element ref="body_part" minOccurs="0" maxOccurs="unbounded"></xs:element>
+    </xs:sequence>
+    <xs:attribute name="n">
+      <xs:simpleType>
+        <xs:restriction base="xs:int">
+          <xs:pattern value="[1-7]"></xs:pattern>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="rest_day" type="xs:boolean"></xs:attribute>
+  </xs:complexType>
+
+
+
+
+  <xs:complexType name="exercise_info_type">
+    <xs:sequence>
+      <xs:element name="name" maxOccurs="1">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:minLength value="5"></xs:minLength>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+
+      <xs:element name="description">
+        <xs:complexType mixed="true">
+          <xs:sequence>
+            <xs:element ref="link" minOccurs="0" maxOccurs="unbounded"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="exercise_group">
+    <xs:sequence>      
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="link"></xs:element>
+        <xs:element name="image">
+        <xs:complexType>
+          <xs:attribute ref="url"></xs:attribute>
+        </xs:complexType>
+        </xs:element>
+      </xs:choice>
+
+      <xs:element name="engagement" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref="body_part" maxOccurs="6"></xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="equipment_needed" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="equipment" type="xs:string" maxOccurs="unbounded"></xs:element>
+          </xs:sequence>
+          <xs:attribute name="optional" type="xs:boolean"></xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="rep_ranges" type="rep_ranges_type"></xs:element>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:element name="exercise" type="exercise_type"></xs:element>
+
+  <xs:complexType name="exercise_type">
+    <xs:complexContent>
+      <xs:extension base="exercise_info_type">
+        <xs:group ref="exercise_group"></xs:group>
+        <xs:attribute name="risky">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="low"></xs:enumeration>
+              <xs:enumeration value="medium"></xs:enumeration>
+              <xs:enumeration value="high"></xs:enumeration>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>    
+  </xs:complexType>
+
+  <xs:element name="link" type="link_type"></xs:element>
+
+  <xs:complexType name="link_type">
+    <xs:attribute ref="url"></xs:attribute>
+  </xs:complexType>
+
+  <xs:element name="body_part" type="body_part_type"></xs:element>
+
+  <xs:simpleType name="body_part_type">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="4"></xs:minLength>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="list_int_type">
+    <xs:restriction base="xs:int">
+      <xs:maxInclusive value="30"></xs:maxInclusive>
+      <xs:minInclusive value="3"></xs:minInclusive>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="list_type">
+    <xs:list itemType="list_int_type"></xs:list>
+  </xs:simpleType>
+
+  <xs:simpleType name="rep_ranges_type">
+    <xs:restriction base="list_type">
+      <xs:maxLength value="5"></xs:maxLength>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:attribute name="url">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="https://.*"></xs:pattern>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+
+
+
+
+
+
+
+  <xs:element name="macro_element" type="macro_element_type"></xs:element>
+
+  <xs:complexType name="macro_element_type">
+    <xs:attribute name="element">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Białko"></xs:enumeration>
+          <xs:enumeration value="Węglowodany"></xs:enumeration>
+          <xs:enumeration value="Tłuszcze"></xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="min_amount" type="amount_type"></xs:attribute>
+    <xs:attribute name="max_amount" type="amount_type"></xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="amount_type">
+    <xs:union memberTypes="xs:int xs:float"></xs:union>
+  </xs:simpleType>
+
+</xs:schema>

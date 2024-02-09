@@ -1,0 +1,32 @@
+
+<!ELEMENT site (training_plans, exercises, diet)>
+  <!ELEMENT training_plans (training_plan+)>
+    <!ELEMENT training_plan (day+)>
+      <!ELEMENT day (body_part*)>
+        
+  <!ELEMENT exercises (exercise+)>
+    <!ELEMENT exercise (name, description, link*, image*, engagement, equipment_needed, rep_ranges)>
+      <!ELEMENT name (#PCDATA)>
+      <!ELEMENT description (#PCDATA | link)*>
+      <!ELEMENT link (#PCDATA)>
+      <!ELEMENT image (#PCDATA)>
+      <!ELEMENT engagement (body_part+)>
+      <!ELEMENT equipment_needed (equipment+)>
+        <!ELEMENT equipment (#PCDATA)>
+      <!ELEMENT rep_ranges (#PCDATA)>
+  <!ELEMENT diet (macro_list)>
+    <!ELEMENT macro_list (macro_element+)>
+      <!ELEMENT macro_element (#PCDATA)>
+
+<!ELEMENT body_part (#PCDATA)>
+
+<!ATTLIST training_plan plan_type CDATA #REQUIRED>
+<!ATTLIST day n CDATA #REQUIRED>
+<!ATTLIST day rest_day (true | false) "false">
+<!ATTLIST exercise risky (low | medium | high) #REQUIRED>
+<!ATTLIST link url CDATA #REQUIRED>
+<!ATTLIST image url CDATA #REQUIRED>
+<!ATTLIST equipment_needed optional (true | false) "false">
+<!ATTLIST macro_element element (Białko | Węglowodany | Tłuszcze) #REQUIRED>
+<!ATTLIST macro_element min_amount CDATA #REQUIRED>
+<!ATTLIST macro_element max_amount CDATA #REQUIRED>

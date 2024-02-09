@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona dla miłośników sportu i kulturystyki. Porady, diety, plany treningowe.">
+    <meta name="keywords" content="Porady, diety, plany treningowe">
+    <meta name="author" content="Kamil Prorok">
+    <title>Be Strong 💪 - Kontakt</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/logo.svg" sizes="any" type="image/svg+xml">
+</head>
+
+<body>
+    <header class="container mb-5">
+        <img src="img/header.webp" id="header-image" width="1920" height="1080" alt="Gym">
+        <div id="header-items">
+            <img src="img/logo.svg" id="header-logo" width="500" height="500" alt="Logo">
+            <h1 id="strong-text">Be<span class="yellow">Strong</span></h1>
+        </div>
+    </header>
+
+    <nav class="container">
+        <div id="nav-1">
+            <a href="index.html" class="inline nav-logo">Be<span class="yellow">Strong</span></a>
+        </div>
+        <div id="nav-2">
+            <a href="index.html" class="nav-item">Strona głowna</a>
+            <div class="dropdown">
+                <p class="nav-item">
+                    Materiały
+                </p>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="Plany-Treningowe.html">Plany treningowe</a></li>
+                        <li><a href="Diety.html">Diety</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="nav-item" href="Kontakt.html">Kontakt</a>
+        </div>
+
+        <input id="hamburger-checkbox" type="checkbox">
+        <label for="hamburger-checkbox">
+            <svg fill="white" viewBox="0 0 20 10" width="40" height="20">
+                <rect width="15" height="1.5"></rect>
+                <rect y="4" width="15" height="1.5"></rect>
+                <rect y="8" width="15" height="1.5"></rect>
+            </svg>
+        </label>
+
+        <div id="nav-mobile">
+            <a href="index.html" class="nav-item">Strona głowna</a>
+            <div class="dropdown">
+                <p class="nav-item">
+                    Materiały
+                </p>
+                <div class="nav-item dropdown-menu">
+                    <ul>
+                        <li><a href="Plany-Treningowe.html">Plany treningowe</a></li>
+                        <li><a href="Diety.html">Diety</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="nav-item" href="Kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="form-container" class="container margins">
+            <h2 class="form-container-item">Skontaktuj się ze mną!</h2>
+            <form class="form-container-item" action="odbierz.php" method="post">
+                <div class="form-item">
+                    <label>Imię</label><br>
+                    <input type="text" placeholder="Imię">
+                </div>
+                <div class="form-item">
+                    <label>Nr. tel.</label><br>
+                    <input type="tel" placeholder="123-456-789">
+                </div>
+                <div class="form-item">
+                    <label>Email</label><br>
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="form-item">
+                    <label>Wiek</label><br>
+                    <input type="number" placeholder="18">
+                </div>
+                <div class="form-item">
+                    <label>Płeć</label><br>
+                    <input type="radio" name="gender" id="gender-man">
+                    <label for="gender-man">Mężczyzna</label><br>
+                    <input type="radio" name="gender" id="gender-woman">
+                    <label for="gender-woman">Kobieta</label>
+                </div>
+                <div class="form-item">
+                    <label>Cel kontaktu</label><br>
+                    <select>
+                        <option>Ułożenie indywidualnego planu treningowe</option>
+                        <option>Ułożenie indywidualnej diety</option>
+                        <option>Inne</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label>Wiadomość</label><br>
+                    <textarea placeholder="Wiadomość" rows="7"></textarea>
+                </div>
+                <div class="form-item">
+                    <input class="form-button" type="reset" value="Wyczyść formularz">
+                    <input class="form-button" type="submit" value="Wyślij">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-items">
+            <p id="copyright-note">&copy; Kamil Prorok 2023</p>
+            <div class="container footer-options">
+                <a href="#" class="footer-item">Powrót</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+html {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100vh !important;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100% !important;
+    height: 7vh !important;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    background-color: #1f1f1f;
+    align-items: center;
+}
+
+main {
+    min-height: 50vh;
+}
+
+footer {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    background-color: #dbdbdb;
+    color: #1f1f1f;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+form input[type=text], input[type=tel], input[type=email], input[type=number], select, textarea {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+input[type=radio] {
+    margin-bottom: 10px;
+}
+
+form input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #303030;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    border: 3px solid black;
+}
+
+td {
+    text-align: center;
+    width: 14.28%;
+}
+
+.link {
+    text-decoration: underline;
+    font-style: italic;
+    color: black;
+}
+
+.form-item {
+    flex-basis: 60%;
+    margin-bottom: 10px;
+}
+
+.form-button {
+    border: none;
+    background-color: #121212;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.margins {
+    margin-left: 10vw; 
+    margin-right: 10vw;
+    width: 80vw;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.mb-5 {
+    margin-bottom: 5vh;
+}
+
+.text {
+    font-size: 1rem;
+}
+
+.gap-7 {
+    gap: 7vw;
+}
+
+.training-plan {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.training-plan-item {
+    flex-basis: 100%;
+    margin-bottom: 10vh;
+}
+
+.training-plan-item-mobile {
+    flex-basis: 100%;
+    margin-bottom: 10vh;
+    font-size: 2rem;
+    display: none;
+}
+
+.training-plan-item-mobile td,
+.training-plan-item-mobile tr,
+.training-plan-item-mobile th {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.training-plan-item-mobile thead tr th {
+    font-size: 2.5rem;
+}
+
+.training-plan-item-mobile tbody tr th {
+    font-size: 2.25rem;
+}
+
+.training-plan-short-cell {
+    height: 3em;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.object-top {
+    object-position: top;
+}
+
+.gallery-image {
+    position: relative;
+    z-index: 0;
+    object-fit: cover;
+    animation: image-unzoom 0.2s forwards;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-image:hover {
+    z-index: 1;
+    animation: image-zoom 0.2s forwards;
+}
+
+.gallery-item {
+    flex-basis: 33.333333%;
+    height: 40vh;
+}
+
+.inline {
+    display: inline;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.footer-items {
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.footer-item {
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 0.9rem;
+    color: #1f1f1f;
+}
+
+.footer-item::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: black;
+    transition: width 0.3s;
+}
+
+.footer-item:hover::after {
+    width: 100%;
+}
+
+.footer-options {
+    width: fit-content;
+}
+
+.yellow {
+    color: rgb(255, 225, 0)
+}
+
+.nav-item {
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    color: white;
+}
+
+.nav-item .dropdown {
+    margin: 5px;
+}
+
+.form-container-item {
+    flex-basis: 100%;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: #2a2a2a;
+    color: white;
+    display: none;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropdown-menu ul li:not(:last-child) {
+    padding-bottom: 10px;
+}
+
+.dropdown-menu ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#header-image {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.8;
+    filter: blur(3px);
+    filter: brightness(0.75);
+    width: 100%;
+    height: 100%;
+}
+
+#header-logo {
+    width: 10%;
+    height: 10%;
+}
+
+#header-items {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    animation: header-fade-in 0.8s ease-in;
+}
+
+#strong-text {
+    font-size: 5.5rem;
+}
+
+#about-1 {
+    flex-basis: 20%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#about-2 {
+    flex-basis: 80%;
+}
+
+#nav-1 {
+    flex-basis: 20%;
+}
+
+#nav-2 {
+    display: flex;
+    flex-basis: 60%;
+    justify-content: end;
+    gap: 10px;
+    align-items: center;
+}
+
+#hamburger-checkbox + label {
+    display: none;
+}
+
+#hamburger-checkbox {
+    display: none;
+}
+
+#form-container {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#nav-mobile {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 7vh;
+    background-color: #1f1f1f;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 2px solid rgb(15, 15, 15);
+}
+
+#hamburger-checkbox:checked + label ~ #nav-mobile {
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+#copyright-note {
+    font-size: 0.8rem;
+    margin-left: 10px;
+}
+
+
+@keyframes header-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(80px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0px);
+    }
+}
+
+@keyframes image-zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes image-unzoom {
+    from {
+        z-index: 1;
+        transform: scale(1.25);
+    }
+
+    to {
+        z-index: 0;
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    html {
+        font-size: 8px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    #header-logo {
+        width: 20%;
+        height: 20%;
+    }
+
+    .text {
+        font-size: 2.25rem;
+    }
+
+    .gallery-item {
+        flex-basis: 100%;
+        height: 25vh;
+    }
+
+    #about {
+        flex-direction: column;
+    }
+
+    #about-1 {
+        flex-basis: 100%;
+        width: 50%;
+    }
+
+    #nav-1 {
+        flex-basis: 60%;
+    }
+
+    #nav-2 {
+        display: none;
+    }
+
+    #hamburger-checkbox + label {
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-basis: 20%;
+        margin-bottom: 0;
+    }
+
+    .nav-logo {
+        font-size: 2rem;
+    }
+    
+    #about-2 {
+        flex-basis: 100%;
+    }
+
+    footer {
+        padding-top: 20px;
+    }
+
+    .footer-items {
+        flex-direction: column-reverse;
+    }
+
+    .footer-item {
+        font-size: 2.25rem;
+    }
+    
+    .footer-options {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    #copyright-note {
+        font-size: 1.8rem;
+    }
+
+    #form-container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .form-container-item {
+        font-size: 3rem;
+    }
+
+    .form-item {
+        flex-basis: 100%;
+    }
+
+
+    form input[type=text], input[type=tel], input[type=email], input[type=number], select, textarea, label {
+        width: 60%;
+        font-size: 2rem;
+    }
+
+    .form-button {
+        width: 60%;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .training-plan-item {
+        display: none;
+    }
+
+    .training-plan-item-mobile {
+        display: block;
+    }
+
+    .nav-item {
+        font-size: 3rem;
+    }
+
+    .dropdown-menu {
+        position: relative;
+    }
+
+    .dropdown-menu ul {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+}

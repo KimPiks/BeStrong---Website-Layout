@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona dla miłośników sportu i kulturystyki. Porady, diety, plany treningowe.">
+    <meta name="keywords" content="Porady, diety, plany treningowe">
+    <meta name="author" content="Kamil Prorok">
+    <title>Be Strong 💪</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/logo.svg" sizes="any" type="image/svg+xml">
+</head>
+
+<body>
+    <header class="container mb-5">
+        <img src="img/header.webp" id="header-image" width="1920" height="1080" alt="Gym">
+        <div id="header-items">
+            <img src="img/logo.svg" id="header-logo" width="500" height="500" alt="Logo">
+            <h1 id="strong-text">Be<span class="yellow">Strong</span></h1>
+        </div>
+    </header>
+
+    <nav class="container">
+        <div id="nav-1">
+            <a href="index.html" class="inline nav-logo">Be<span class="yellow">Strong</span></a>
+        </div>
+        <div id="nav-2">
+            <a href="index.html" class="nav-item">Strona głowna</a>
+            <div class="dropdown">
+                <p class="nav-item">
+                    Materiały
+                </p>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="Plany-Treningowe.html">Plany treningowe</a></li>
+                        <li><a href="Diety.html">Diety</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="nav-item" href="Kontakt.html">Kontakt</a>
+        </div>
+
+        <input id="hamburger-checkbox" type="checkbox">
+        <label for="hamburger-checkbox">
+            <svg fill="white" viewBox="0 0 20 10" width="40" height="20">
+                <rect width="15" height="1.5"></rect>
+                <rect y="4" width="15" height="1.5"></rect>
+                <rect y="8" width="15" height="1.5"></rect>
+            </svg>
+        </label>
+
+        <div id="nav-mobile">
+            <a href="index.html" class="nav-item">Strona głowna</a>
+            <div class="dropdown">
+                <p class="nav-item">
+                    Materiały
+                </p>
+                <div class="nav-item dropdown-menu">
+                    <ul>
+                        <li><a href="Plany-Treningowe.html">Plany treningowe</a></li>
+                        <li><a href="Diety.html">Diety</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="nav-item" href="Kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <main>
+        <div id="about" class="container margins gap-7 align-items-center mb-5">
+            <div id="about-1">
+                <img src="img/gym.svg" width="150" height="150" alt="Gym icon">
+            </div>
+            <div id="about-2">
+                <p class="text">
+                    Regularna aktywność fizyczna jest kluczowa do zachowania zdrowia. Siłownia jest świetnym sposobem na nadrobienie tej aktywności. Niezależnie od tego czy zamierzamy wyrzeźbić sylwetkę, poprawić osiągi siłowe, poprawić kondycję czy po prostu odreagować i ćwiczyć dla zdrowia - siłownia jest do tego świetną okazją. Na tej stronie znajdziesz przykładowe <a class="link" href="Plany-Treningowe.html">Plany Treningowe</a> oraz <a class="link" href="Diety.html">Diety</a> które pomogą Ci uzyskać jak najlepsze rezultaty. 
+                </p>
+            </div>
+        </div>
+
+        <div class="container flex-wrap" id="gallery">
+            <div class="gallery-item">
+                <a href="img/gallery/1.webp" target="_blank">
+                    <img src="img/gallery/1.webp" width="1920" height="1080" alt="Gallery image 1"
+                        class="gallery-image">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/gallery/2.webp" target="_blank">
+                    <img src="img/gallery/2.webp" width="1920" height="1080" alt="Gallery image 2"
+                        class="gallery-image">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/gallery/3.webp" target="_blank">
+                    <img src="img/gallery/3.webp" width="1080" height="1920" alt="Gallery image 3"
+                        class="gallery-image object-top">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/gallery/4.webp" target="_blank">
+                    <img src="img/gallery/4.webp" width="1920" height="1080" alt="Gallery image 4"
+                        class="gallery-image">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/gallery/5.webp" target="_blank">
+                    <img src="img/gallery/5.webp" width="1920" height="1080" alt="Gallery image 5"
+                        class="gallery-image">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="img/gallery/6.webp" target="_blank">
+                    <img src="img/gallery/6.webp" width="1920" height="1080" alt="Gallery image 6"
+                        class="gallery-image">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-items">
+            <p id="copyright-note">&copy; Kamil Prorok 2023</p>
+            <div class="container footer-options">
+                <a href="#about" class="footer-item">Informacje</a>
+                <a href="#" class="footer-item">Powrót</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

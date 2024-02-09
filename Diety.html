@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona dla miłośników sportu i kulturystyki. Porady, diety, plany treningowe.">
+    <meta name="keywords" content="Porady, diety, plany treningowe">
+    <meta name="author" content="Kamil Prorok">
+    <title>Be Strong 💪 - Diety</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/logo.svg" sizes="any" type="image/svg+xml">
+</head>
+
+<body>
+    <header class="container mb-5">
+        <img src="img/header.webp" id="header-image" width="1920" height="1080" alt="Gym">
+        <div id="header-items">
+            <img src="img/logo.svg" id="header-logo" width="500" height="500" alt="Logo">
+            <h1 id="strong-text">Be<span class="yellow">Strong</span></h1>
+        </div>
+    </header>
+
+    <nav class="container">
+        <div id="nav-1">
+            <a href="index.html" class="inline nav-logo">Be<span class="yellow">Strong</span></a>
+        </div>
+        <div id="nav-2">
+            <a href="index.html" class="nav-item">Strona głowna</a>
+            <div class="dropdown">
+                <p class="nav-item">
+                    Materiały
+                </p>
+                <div class="dropdown-menu">
+                    <ul>
+                        <li><a href="Plany-Treningowe.html">Plany treningowe</a></li>
+                        <li><a href="Diety.html">Diety</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="nav-item" href="Kontakt.html">Kontakt</a>
+        </div>
+
+        <input id="hamburger-checkbox" type="checkbox">
+        <label for="hamburger-checkbox">
+            <svg fill="white" viewBox="0 0 20 10" width="40" height="20">
+                <rect width="15" height="1.5"></rect>
+                <rect y="4" width="15" height="1.5"></rect>
+                <rect y="8" width="15" height="1.5"></rect>
+            </svg>
+        </label>
+
+        <div id="nav-mobile">
+            <a href="index.html" class="nav-item">Strona głowna</a>
+            <div class="dropdown">
+                <p class="nav-item">
+                    Materiały
+                </p>
+                <div class="nav-item dropdown-menu">
+                    <ul>
+                        <li><a href="Plany-Treningowe.html">Plany treningowe</a></li>
+                        <li><a href="Diety.html">Diety</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <a class="nav-item" href="Kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container margins flex-wrap">
+            <p class="text">
+                Nawet najlepszy trening nie pomoże nam zbudować wymarzonej sylwetki bez odpowiedniej diety! To ona w największym stopniu odpowiada za nasze efekty. W przypadku gdy chcemy zredukować masę naszego ciała to powinniśmy ograniczyć kalorie i zejść poniżej naszego zapotrzebowania kalorycznego. Z kolei, gdy jesteśmy “na masie”, to powinniśmy dostarczać naszemu organizmowi więcej kalorii, niż tego rzeczywiście potrzebuje. Poza kaloriami powinniśmy także patrzeć na makroelementy takie jak: białko, węglowodany czy tłuszcze.
+Dla osób ćwiczący zaleca się zażywanie następującej ilości makroelementów dziennie (liczba gramów na 1kg masy ciała):
+            </p>
+            <ul class="text width-full">
+                <li>Białko 1,2 - 1,8</li>
+                <li>Węglowodany 5 - 7</li>
+                <li>Tłuszcze 1,8 - 2,2</li>
+            </ul>
+            <p class="text">
+                Przykładowe diety można znaleźć na stronie <a class="link" href="https://www.budujmase.pl/diety/przykladowe-diety">BudujMase.pl</a>.
+                <br>
+                Z kolei spersonalizowane diety można uzyskać po <a href="Kontakt.html" class="link">Kontakcie</a>.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-items">
+            <p id="copyright-note">&copy; Kamil Prorok 2023</p>
+            <div class="container footer-options">
+                <a href="#" class="footer-item">Powrót</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
